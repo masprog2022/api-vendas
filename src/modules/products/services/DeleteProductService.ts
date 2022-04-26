@@ -10,7 +10,9 @@ class DeleteProductService {
   public async execute({ id }: IRequest): Promise<void> {
     const productsRepository = getCustomRepository(ProductsRepository);
 
-    const product = await productsRepository.findOne(id);
+    const product = await productsRepository.findOne({
+      where: { id },
+    });
 
     if (!product) {
       throw new AppError("Product not found!");

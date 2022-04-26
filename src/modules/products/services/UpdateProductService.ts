@@ -10,7 +10,7 @@ interface IRequest {
   quantity: number;
 }
 
-class ShowProductService {
+class UpdateProductService {
   public async execute({
     id,
     name,
@@ -19,7 +19,9 @@ class ShowProductService {
   }: IRequest): Promise<Product> {
     const productsRepository = getCustomRepository(ProductsRepository);
 
-    const product = await productsRepository.findOne(id);
+    const product = await productsRepository.findOne({
+      where: { id },
+    });
 
     if (!product) {
       throw new AppError("Product not found!");
@@ -41,4 +43,4 @@ class ShowProductService {
   }
 }
 
-export default ShowProductService;
+export default UpdateProductService;
