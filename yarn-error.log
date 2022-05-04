@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Users\Mauro\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add -D @type/joi
+  C:\Program Files\nodejs\node.exe C:\Users\Mauro\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add bycriptjs
 
 PATH: 
   C:\Users\Mauro\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\Mauro\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\Program Files\Dart\dart-sdk\bin;C:\Program Files\Git\cmd;C:\Program Files\Dart\dart-sdk\bin;C:\Program Files\Java\jdk-11.0.10\bin;C:\ProgramData\chocolatey\bin;C:\Program Files\OpenJDK\openjdk-11.0.11_9\bin;C:\Android\Sdk\emulator;C:\Android\Sdk\tools;C:\Android\Sdk\tools\bin;C:\Android\Sdk\platform-tools;C:\Users\Mauro\AppData\Local\Yarn\bin;C:\Program Files\Java\apache-maven-3.6.3\bin;C:\Program Files (x86)\Google\Cloud SDK\google-cloud-sdk\bin;C:\minikube;C:\Program Files\nodejs;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin;C:\Users\Mauro\AppData\Local\Microsoft\WindowsApps;C:\Users\Mauro\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\Dart\dart-sdk\bin;C:\Program Files\heroku\bin;C:\Users\Mauro\AppData\Roaming\npm;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
@@ -14,7 +14,7 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/@type%2fjoi: Not found
+  Error: https://registry.yarnpkg.com/bycriptjs: Not found
       at Request.params.callback [as _callback] (C:\Users\Mauro\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:67029:18)
       at Request.self.callback (C:\Users\Mauro\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:140883:22)
       at Request.emit (node:events:390:28)
@@ -41,6 +41,7 @@ npm manifest:
     "devDependencies": {
       "@types/cors": "^2.8.12",
       "@types/express": "^4.17.13",
+      "@types/joi": "^17.2.3",
       "@types/node": "^17.0.25",
       "@typescript-eslint/eslint-plugin": "^5.20.0",
       "@typescript-eslint/parser": "^5.20.0",
@@ -193,6 +194,13 @@ Lockfile:
       "@types/express-serve-static-core" "^4.17.18"
       "@types/qs" "*"
       "@types/serve-static" "*"
+  
+  "@types/joi@^17.2.3":
+    version "17.2.3"
+    resolved "https://registry.yarnpkg.com/@types/joi/-/joi-17.2.3.tgz#b7768ed9d84f1ebd393328b9f97c1cf3d2b94798"
+    integrity sha512-dGjs/lhrWOa+eO0HwgxCSnDm5eMGCsXuvLglMghJq32F6q5LyyNuXb41DHzrg501CKNOSSAHmfB7FDGeUnDmzw==
+    dependencies:
+      joi "*"
   
   "@types/json-schema@^7.0.9":
     version "7.0.11"
@@ -1135,7 +1143,7 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/isexe/-/isexe-2.0.0.tgz#e8fbf374dc556ff8947a10dcb0572d633f2cfa10"
     integrity sha1-6PvzdNxVb/iUehDcsFctYz8s+hA=
   
-  joi@17.x.x:
+  joi@*, joi@17.x.x:
     version "17.6.0"
     resolved "https://registry.yarnpkg.com/joi/-/joi-17.6.0.tgz#0bb54f2f006c09a96e75ce687957bd04290054b2"
     integrity sha512-OX5dG6DTbcr/kbMFj0KGYxuew69HPcAE3K/sZpEV2nP6e/j/C0HV+HNiBPCASxdx5T7DMoa0s8UeHWMnb6n2zw==
