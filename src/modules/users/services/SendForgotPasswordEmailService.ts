@@ -21,13 +21,24 @@ class SendForgotPasswordEmailService {
 
     console.log(user);
 
-    const token = await usersTokenRepository.generate(user.id);
+    //const token = await usersTokenRepository.generate(user.id);
+    const { token } = await usersTokenRepository.generate(user.id);
 
-    console.log(token);
+    // console.log(token);
 
     await EtherealMail.sendEmail({
-      to: email,
-      body: `Solicitacao de senha recebida ${token?.token}`,
+      to: {
+        name: user.name,
+        email: user.email,
+      },
+      subject: "[API Vendas] Recuperação de Senha",
+      templateData: {
+        template: `Olá {{name}}: {{token}}`,
+        variables: {
+          name: user.name,
+          token,
+        },
+      },
     });
   }
 }
