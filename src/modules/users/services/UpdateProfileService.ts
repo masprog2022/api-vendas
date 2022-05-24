@@ -37,11 +37,11 @@ class UpdateProfileService {
       throw new AppError("Old password is required. ");
     }
 
-    if (password && !old_password) {
+    if (password && old_password) {
       const checkOldPassword = await compare(old_password, user.password);
 
       if (!checkOldPassword) {
-        throw new AppError("Old password does not exist. ");
+        throw new AppError("Old password does not match. ");
       }
       user.password = await hash(password, 8);
     }
