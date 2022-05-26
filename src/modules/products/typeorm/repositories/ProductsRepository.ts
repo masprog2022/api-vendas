@@ -3,7 +3,7 @@ import { EntityRepository, In, Repository } from "typeorm";
 import Product from "../entities/Product";
 
 interface IFindProducts {
-  id: string
+  id: string;
 }
 
 @EntityRepository(Product)
@@ -17,8 +17,8 @@ export class ProductsRepository extends Repository<Product> {
     return product;
   }
 
-    public async findAllByIds(products: IFindProducts[]): Promise<Product[]> {
-    const productIds = products.map(product => product.id);
+  public async findAllByIds(products: IFindProducts[]): Promise<Product[]> {
+    const productIds = products.map((product) => product.id);
 
     const existentProducts = await this.find({
       where: {
@@ -28,5 +28,4 @@ export class ProductsRepository extends Repository<Product> {
 
     return existentProducts;
   }
-}
 }
