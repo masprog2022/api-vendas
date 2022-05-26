@@ -8,6 +8,7 @@ import {
 } from "typeorm";
 
 import OrdersProducts from "@modules/orders/typeorm/entities/OrdersProducts";
+//import OrdersProducts from "../../../orders/typeorm/entities/OrdersProducts";
 
 @Entity("products")
 class Product {

@@ -10,6 +10,7 @@ import {
 
 import OrdersProducts from "./OrdersProducts";
 import Customer from "@modules/customers/typeorm/entities/Customer";
+//import Customer from "../../../customers/typeorm/entities/Customer";
 
 @Entity("orders")
 class Order {

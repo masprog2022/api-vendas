@@ -10,8 +10,9 @@ import {
 
 import Order from "./Order";
 import Product from "@modules/products/typeorm/entities/Product";
+//import Product from "../../../products/typeorm/entities/Product";
 
-@Entity("OrdersProducts")
+@Entity("orders_products")
 class OrdersProducts {
   @PrimaryGeneratedColumn("uuid")
   id: string;
