@@ -27,9 +27,10 @@ class CreateOrderService {
       throw new AppError("Could not find any customer with the given id.");
     }
 
-    const productExists = await productsRepository.findByName(name);
-    if (productExists) {
-      throw new AppError("There is already one product with this name");
+    const existsProducts = await productsRepository.findAllByIds(products);
+
+    if (!existsProducts.length) {
+      throw new AppError("Could not find any products with the given ids.");
     }
   }
 }
