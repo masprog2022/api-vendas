@@ -21,7 +21,7 @@ class Order {
   customer: Customer;
 
   @OneToMany(() => OrdersProducts, (order_products) => order_products.order, {
-    cascade: true,
+    cascade: true, // Aqui assim que foi feito save, todas a OrdersProducts vao ser salvos no banco de dados
   })
   order_products: OrdersProducts[];
 
